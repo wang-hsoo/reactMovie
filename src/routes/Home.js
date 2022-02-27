@@ -32,8 +32,10 @@ function Home(){
     <div> 
       {loading ? <h1>Loading...</h1> : 
         <div>{movie.map((movies) => (
+          
             <Movie 
               key={movies.id}
+              id={movies.id}
               medium_cover_image ={movies.medium_cover_image} 
               title = {movies.title}
               genres = {movies.genres}
