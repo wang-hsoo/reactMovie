@@ -10,7 +10,8 @@ function Movie({id, medium_cover_image, title, genres, summary}){
                 <h2 className={styles.movie__title}>
                     <Link to ={`/movie/${id}`}>{title}</Link>
                 </h2>
-                <p>{summary}</p>
+                <p>{summary.length > 235 ? `${summary.slice(0, 235)}...` : summary}</p>
+                {/* slice 시작과 끝의 값이 필요 */}
                 <ul className={styles.movie__genres}>
                     {genres.map((g) => (
                     <li key = {g}>{g}</li>
