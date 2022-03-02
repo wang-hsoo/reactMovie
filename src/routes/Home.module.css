@@ -28,3 +28,16 @@
       width: 100%;
     }
   }
+
+  .detailCon{
+    padding: 40px;
+  }
+
+  .detailMain{
+    display: flex;
+    
+  }
+
+  .detailMain div, .detailMain a{
+    margin-left: 10px;
+  }
