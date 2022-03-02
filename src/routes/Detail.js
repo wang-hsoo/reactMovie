@@ -1,6 +1,7 @@
 import {useParams} from "react-router-dom";
 import {useEffect, useState} from "react";
 import {Link} from "react-router-dom";
+import styles from "./Home.module.css";
 
 //url에 있는 값을 반환해주는 함수
 function Detail(){
@@ -26,7 +27,10 @@ function Detail(){
     
     return (
     <div>
-        {loading ? <h1>Loading...</h1> : 
+        {loading ? 
+        <div className={styles.loader}>
+          <span>Loading...</span>
+        </div> : 
            <div>
                <Link to ={`/`}>back</Link>
                 <h1>{movie.title_long}</h1>
