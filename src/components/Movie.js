@@ -24,6 +24,7 @@ function Movie({id, medium_cover_image, title, genres, summary}){
 }
 
 Movie.propTypes = {
+    //proptypes 통해서 아래에 있는 값들이 옯바른 타입으로 불러오는지 확인
     id : PropTypes.number.isRequired,
     medium_cover_image: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,

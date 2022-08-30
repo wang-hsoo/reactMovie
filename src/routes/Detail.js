@@ -9,6 +9,7 @@ function Detail(){
     const [loading, setLoading] = useState(true);
     const getMovie = async () => {
         const json = await(
+            	//url 상에 있는 영화 이이디를 통해 영화 세부젇보 데이터를 불러옴
             await fetch(`https://yts.mx/api/v2/movie_details.json?movie_id=${id}`)
             ).json();  
 
@@ -32,7 +33,7 @@ function Detail(){
           <span>Loading...</span>
         </div> : 
            <div className={styles.detailCon}>
-               <Link to ={`/`}>back</Link>
+               <Link to ={`/`}>Home</Link>
                 <h1>{movie.title_long}</h1>
                 
                 <div className={styles.detailMain}>
